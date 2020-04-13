@@ -1,5 +1,7 @@
 # cli-social-network
 
+The purpose of this repository experiment with persistent memory and storing data in arrays by 
+
 ### getting started
 
 ### file structure
