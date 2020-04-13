@@ -31,11 +31,11 @@ def main():
 		authenticated = False
 
 		while not authenticated:
-			userInputName = input('Please enter a username: ')
+			userInputName = raw_input('Please enter a username: ') #renamed to input() in python 3.x
 
 			for i in users:
 				if userInputName == i[0]:
-					userInputPass = input('Please enter a password: ')
+					userInputPass = raw_input('Please enter a password: ')
 
 					if userInputPass == i[1]:
 						#assign authenticated user as 'user'
@@ -60,7 +60,7 @@ def main():
 			print('7. Search friends')
 			print('8. Exit\n')
 
-			command = input('Please enter a number from the menu above: ')
+			command = raw_input('Please enter a number from the menu above: ')
 
 			if command == '1':
 				print(userObject.getFriends())
@@ -69,7 +69,7 @@ def main():
 				print(userObject.getStatuses())
 
 			if command == '3':
-				newStatus = input('Enter a status/message: ')
+				newStatus = raw_input('Enter a status/message: ')
 				userObject.setStatus(newStatus)
 
 			if command == '4':
@@ -103,7 +103,7 @@ def main():
 
 			#EXTRA CREDIT
 			if command == '7':
-				search = input("Enter a friend's name: ")
+				search = raw_input("Enter a friend's name: ")
 
 				#again, some input validation
 				if search in userObject.getFriends():
